@@ -1,8 +1,15 @@
-function firstWord(s) {
-  // your code here
+function firstWord(str) {
+    if (str === '' || !str.includes(' ')) {
+        return str;
+    }
+
+    const spaceIndex = str.indexOf(' ');
+    return str.substring(0, spaceIndex);
 }
 
-// Do not change the code below
+// Taking user input in a browser environment
+const userInput = prompt('Enter a string:'); // This will prompt the user to enter a string
+const result = firstWord(userInput);
+alert(result);
 
-const s = prompt("Enter String:");
-alert(firstWord(s));
+
